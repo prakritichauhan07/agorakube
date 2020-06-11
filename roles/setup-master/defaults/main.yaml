@@ -20,3 +20,4 @@ kube_apiserver_enable_admission_plugins:
   - ValidatingAdmissionWebhook
   - RuntimeClass
   - ResourceQuota
+drain_node_defore_update_k8s: False

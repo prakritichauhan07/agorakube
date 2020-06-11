@@ -1,5 +1,8 @@
 ---
 - hosts: masters
+  vars:
+    delete_previous_k8s_install: True
+    drain_node_defore_update_k8s: True
   become: true
   roles:
     - setup-master
@@ -8,6 +11,9 @@
     - install-runtimes
     - setup-worker
 - hosts: workers
+  vars:
+    delete_previous_k8s_install: True
+    drain_node_defore_update_k8s: True
   become: true
   roles:
   - install-cni

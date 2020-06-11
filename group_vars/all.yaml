@@ -15,6 +15,7 @@ kubernetes_release: v1.18.3
 delete_previous_k8s_install: False
 delete_etcd_install: False
 check_etcd_install: True
+drain_node_defore_update_k8s: False
 
 # IPs-CIDR Configurations
 cluster_cidr: 10.33.0.0/16
